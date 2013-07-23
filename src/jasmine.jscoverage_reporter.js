@@ -173,7 +173,7 @@
 
   var getCoverage = function() {
     try {
-      return top._$jscoverage;
+      return global._$jscoverage;
     } catch(e) {}
     return {};
   };
@@ -207,5 +207,5 @@
     }
   };
 
-  jasmine.JSCoverageReporter = JSCoverageReporter;
+  module.exports = JSCoverageReporter;
 }());
